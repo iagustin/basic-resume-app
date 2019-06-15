@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { PRIMARY_COLOR } from './styles';
+import { H1_SIZE, H2_SIZE } from './styles';
 
 class Content extends Component {
     render () {
@@ -14,20 +14,10 @@ class Content extends Component {
 };
 
 const styles = {
-    container: {
-    },
     title: {
-        marginBottom: 0,
-        fontSize: 25,
-        fontWeight: 700,
-        color: PRIMARY_COLOR,
+        ...H1_SIZE,
     },
-    subtitle: {
-        marginTop: 0,
-        fontSize: 16,
-        fontWeight: 500,
-        color: 'lightblue',
-    },
+    subtitle: H2_SIZE,
     description: {
         lineHeight: 1.5,
     }

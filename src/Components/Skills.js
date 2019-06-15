@@ -19,7 +19,7 @@ class Skills extends Component {
     render () {
         return (
             <div style={ styles.container }>
-                <div style={ styles.title }>Skills</div>
+                <h1>Skills</h1>
                 <div>
                     {data.map(
                         (data) => (
@@ -42,10 +42,6 @@ class Skills extends Component {
 const styles = {
     container: {
         marginTop: 20, 
-    },
-    title: {
-        fontSize: 35,
-        fontWeight: 700,
     },
 };
 

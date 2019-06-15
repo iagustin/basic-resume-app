@@ -1,20 +1,45 @@
-import React from 'react';
+import React, { Component } from 'react';
+
 import Header from './Components/Header';
 import Body from './Components/Body';
 import Skills from './Components/Skills';
+import Education from './Components/Education';
 
-function App() {
-  return (
-    <div style={styles.container}>
-      <div style={ styles.content }>
-        <Header />
-        <Skills />
-        {/* <Content {...edu} /> */}
-        <div style={ styles.h1 }>Experience</div>
-        <Body />
+class App extends Component {
+  constructor (props) {
+    super(props);
+
+    this.state = {
+      width: '40%',
+    };
+
+  }
+
+  componentDidMount () {
+    let x = window.matchMedia("(max-width: 500px)")
+    this.myFunction(x) // Call listener function at run time
+    x.addListener(this.myFunction) // Attach listener function on state changes
+  }
+
+  myFunction(x) {
+    if (x.matches) {
+      this.setState({width: '80%'});
+    }
+  }
+
+  render () {
+    return (
+      <div style={styles.container}>
+        <div style={ {width: this.state.width} }>
+          <Header />
+          <Skills />
+          <Education />
+          <h1>Experience</h1>
+          <Body />
+        </div>
       </div>
-    </div>
-  );
+    );
+  }
 }
 
 const styles = {
@@ -22,14 +47,7 @@ const styles = {
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
-  },
-  content: {
-    width: '40%',
-  },
-  h1: {
-    fontSize: 35,
-    fontWeight: 700,
-    marginBottom: 20,
+    marginTop: 20,
   },
 };
 
