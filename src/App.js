@@ -1,15 +1,7 @@
 import React from 'react';
-import Content from './Content';
 import Header from './Components/Header';
 import Body from './Components/Body';
 import Skills from './Components/Skills';
-
-  const edu =
-  {
-    title: 'Education',
-    subtitle: 'BS Computer Science - CSULB',
-    description: '',
-  }
 
 function App() {
   return (
@@ -17,8 +9,8 @@ function App() {
       <div style={ styles.content }>
         <Header />
         <Skills />
-        <Content {...edu} />
-        <h1>Experience</h1>
+        {/* <Content {...edu} /> */}
+        <div style={ styles.h1 }>Experience</div>
         <Body />
       </div>
     </div>
@@ -34,7 +26,10 @@ const styles = {
   content: {
     width: '40%',
   },
-  body: {
+  h1: {
+    fontSize: 35,
+    fontWeight: 700,
+    marginBottom: 20,
   },
 };
 

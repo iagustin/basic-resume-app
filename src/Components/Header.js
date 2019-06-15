@@ -10,7 +10,7 @@ const info = {
 const iconTextData = [
 {
     icon: 'email',
-    text: 'i@gmail.com',
+    text: 'abc.def@gmail.com',
 },
 {
     icon: 'phone',
@@ -24,7 +24,7 @@ class Header extends Component {
             <div style={ styles.container }>
                 <Content {...info} />
                 {iconTextData.map(
-                    (data) => <IconWithText data={ data }/>
+                    (data) => <div style={ styles.text }><IconWithText data={ data } /></div>
                 )}
             </div>
         );
@@ -32,7 +32,8 @@ class Header extends Component {
 };
 
 const styles = {
-    container: {
+    text: {
+        marginBottom: 5,
     }
 };
 

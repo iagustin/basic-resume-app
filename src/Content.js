@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { PRIMARY_COLOR } from './styles';
 
 class Content extends Component {
     render () {
@@ -17,12 +18,13 @@ const styles = {
     },
     title: {
         marginBottom: 0,
-        fontSize: 24,
+        fontSize: 25,
         fontWeight: 700,
+        color: PRIMARY_COLOR,
     },
     subtitle: {
         marginTop: 0,
-        fontSize: 14,
+        fontSize: 16,
         fontWeight: 500,
         color: 'lightblue',
     },
