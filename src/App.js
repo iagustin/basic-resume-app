@@ -13,6 +13,7 @@ class App extends Component {
       width: '40%',
     };
 
+    this.myFunction = this.myFunction.bind(this);
   }
 
   componentDidMount () {
