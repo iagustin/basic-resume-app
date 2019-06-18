@@ -1,29 +1,17 @@
 import React, { Component } from 'react';
 import { PRIMARY_COLOR } from '../styles';
 
-const data = [
-    {
-        title: 'Stack',
-        description: 'JavaScript (ES 5 & ES 6), HTML5, Javascript CSS inline styles',
-    },
-    {
-        title: 'Framework',
-        description: 'ReactJS, Redux, Radium',
-    },
-    {
-        title: 'Tools',
-        description: 'Git, Github, Jira (create bugs/stories even jira workflows), Linux',
-    },
-]
 class Skills extends Component {
     render () {
+        const data = this.props.data.skillsData;
+    
         return (
             <div style={ styles.container }>
                 <h1>Skills</h1>
                 <div>
                     {data.map(
                         (data) => (
-                            <p>
+                            <p key={data.title}>
                                 <span
                                     style={{ color: PRIMARY_COLOR }}
                                 >
