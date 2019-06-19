@@ -114,7 +114,7 @@ class App extends Component {
           <Header data={ data } />
           <Skills data={ data } />
           <Education data={ data } />
-          <h1>Experience</h1>
+          <h1 style={ styles.h1 }>Experience</h1>
           <Body data={ data } />
         </div>
       </div>
@@ -128,6 +128,9 @@ const styles = {
     flexDirection: 'column',
     alignItems: 'center',
     marginTop: 20,
+  },
+  h1: { 
+    textTransform: 'uppercase'
   },
 };
 

@@ -7,7 +7,7 @@ class Skills extends Component {
     
         return (
             <div style={ styles.container }>
-                <h1>Skills</h1>
+                <h1 style={ styles.h1 }>Skills</h1>
                 <div>
                     {data.map(
                         (data) => (
@@ -30,6 +30,9 @@ class Skills extends Component {
 const styles = {
     container: {
         marginTop: 20, 
+    },
+    h1: { 
+        textTransform: 'uppercase'
     },
 };
 

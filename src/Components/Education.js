@@ -6,7 +6,7 @@ const Education = ( props ) => {
 
     return (
       <Fragment>
-          <h1>{ header }</h1>
+          <h1 style={ styles.header }>{ header }</h1>
           <h2 style={styles.description}>
             { description }
           </h2>
@@ -16,6 +16,7 @@ const Education = ( props ) => {
 };
 
 const styles = {
+  header: { textTransform: 'uppercase' },
   description: { color: PRIMARY_COLOR },
 };
 
