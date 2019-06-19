@@ -89,7 +89,7 @@ class App extends Component {
     super(props);
 
     this.state = {
-      width: '40%',
+      width: '45%',
     };
 
     this.myFunction = this.myFunction.bind(this);
