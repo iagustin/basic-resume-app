@@ -10,5 +10,6 @@ export const H2_SIZE = {
     marginTop: 0,
     fontSize: 16,
     fontWeight: 500,
-    color: 'lightblue',
+    color: PRIMARY_COLOR,
+    opacity: .6,
 };
