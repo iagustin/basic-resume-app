@@ -1,4 +1,4 @@
-export const PRIMARY_COLOR = '#01BAEF';
+export const PRIMARY_COLOR = '#5FB2C1';
 export const H1_SIZE = {
     fontSize: 25,
     fontWeight: 700,
