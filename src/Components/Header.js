@@ -5,11 +5,11 @@ import img from '../profile-pic.png';
 
 class Header extends Component {
     render () {
-        const { headerInfo, iconTextData, mobile } = this.props.data;
-        const containerStyle = !mobile && styles.container;
+        const { headerInfo, iconTextData } = this.props.data;
+        const { mobile } = this.props;
         
         return (
-            <div style={ containerStyle }>
+            <div style= { mobile ? null : styles.container } >
                 <div style={ styles.rightContainer } >
                     <img style={ styles.img } alt='Profile' src={img} />
                 </div>

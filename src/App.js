@@ -107,16 +107,17 @@ class App extends Component {
   }
 
   myFunction(smallScreenSize) {
+    
     if (smallScreenSize.matches) {
       this.setState({
-        width: '80%',
+        width: '80%', // this should be derived state
         mobile: true,
       });
     }
   }
 
   render () {
-    const { mobile } = this.props;
+    const { mobile } = this.state;
 
     return (
       <div style={styles.container}>
