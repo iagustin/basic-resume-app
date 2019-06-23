@@ -13,11 +13,15 @@ const data = {
   iconTextData: [
     {
       icon: 'email',
-      text: 'abc.def@gmail.com',
+      text: 'iagustin@gmail.com',
     },
     {
       icon: 'phone',
       text: '123-456-789' ,
+    },
+    {
+      icon: 'info',
+      text: 'https://www.linkedin.com/in/iagustin/' ,
     },
   ],
   skillsData: [
@@ -128,6 +132,7 @@ const styles = {
     flexDirection: 'column',
     alignItems: 'center',
     marginTop: 20,
+    fontSize: 18,
   },
   h1: { 
     textTransform: 'uppercase'
