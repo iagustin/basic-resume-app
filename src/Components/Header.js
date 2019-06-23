@@ -5,18 +5,19 @@ import img from '../profile-pic.png';
 
 class Header extends Component {
     render () {
-        const { headerInfo, iconTextData } = this.props.data;
+        const { headerInfo, iconTextData, mobile } = this.props.data;
+        const containerStyle = !mobile && styles.container;
         
         return (
-            <div style={ styles.container }>
+            <div style={ containerStyle }>
+                <div style={ styles.rightContainer } >
+                    <img style={ styles.img } alt='Profile' src={img} />
+                </div>
                 <div style={ styles.leftContainer }>
                     <Content {...headerInfo} />
                     {iconTextData.map(
                         (data) => <div key={data.icon} style={ styles.text }><IconWithText data={ data } /></div>
                     )}
-                </div>
-                <div style={ styles.rightContainer } >
-                    <img style={ styles.img } alt='Profile' src={img} />
                 </div>
             </div>
         );
@@ -26,6 +27,7 @@ class Header extends Component {
 const styles = {
     container: {
         display: 'flex',
+        flexDirection: 'row-reverse',
         justifyContent: 'space-between',
     },
     text: {

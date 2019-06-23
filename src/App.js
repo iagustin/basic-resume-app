@@ -94,28 +94,34 @@ class App extends Component {
 
     this.state = {
       width: '45%',
+      mobile: false,
     };
 
     this.myFunction = this.myFunction.bind(this);
   }
 
   componentDidMount () {
-    let x = window.matchMedia("(max-width: 500px)")
-    this.myFunction(x) // Call listener function at run time
-    x.addListener(this.myFunction) // Attach listener function on state changes
+    let smallScreenSize = window.matchMedia('(max-width: 500px)')
+    this.myFunction(smallScreenSize) // Call listener function at run time
+    smallScreenSize.addListener(this.myFunction) // Attach listener function on state changes
   }
 
-  myFunction(x) {
-    if (x.matches) {
-      this.setState({width: '80%'});
+  myFunction(smallScreenSize) {
+    if (smallScreenSize.matches) {
+      this.setState({
+        width: '80%',
+        mobile: true,
+      });
     }
   }
 
   render () {
+    const { mobile } = this.props;
+
     return (
       <div style={styles.container}>
         <div style={ {width: this.state.width} }>
-          <Header data={ data } />
+          <Header data={ data } mobile={ mobile } />
           <Skills data={ data } />
           <Education data={ data } />
           <h1 style={ styles.h1 }>Experience</h1>
